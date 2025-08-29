@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner scan=new Scanner(System.in);
+        int n = scan.nextInt();
+        if(n>0)
+        System.out.print("positive");
+        else if (n<0) 
+        System.out.print("negative");
+        else
+        System.out.print("zero");
+    }    
+}
+
+input:
+5
+output:
+positive
+  
+input:
+-3
+output:
+negative
+
+input:
+0
+output:
+zero
