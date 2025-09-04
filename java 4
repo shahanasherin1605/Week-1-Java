@@ -1,1 +1,22 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner scan=new Scanner(System.in);
+        int i =scan.nextInt();
+        int years = (i/365);
+        int months = (i%365);
+        int days = ((i%365)%30);
+        System.out.println("years: "+years);
+        System.out.println("months: "+months);
+        System.out.println("days: "+days);
+    }
+}
 
+Input :
+400
+Output :
+Years: 1
+Months: 1
+Days: 5
