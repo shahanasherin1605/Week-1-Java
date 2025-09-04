@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner scan=new Scanner(System.in);
+        int n = scan.nextInt();
+        int a = scan.nextInt();
+        if(a<n)
+        {
+        System.out.print("max="+n);
+        System.out.print("min="+a);
+        }
+        else
+        {
+        System.out.print("max="+a);
+        System.out.print("min="+n);
+        }
+    }
+}
+
+Input: 5 9
+Output:
+max=9 min=5
+
+Input: 12 7
+Output:
+max=12 min=7
