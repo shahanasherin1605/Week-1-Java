@@ -1,1 +1,42 @@
+import java.util.*;
 
+public class SBICreditCardEligibility {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int primaryAge = sc.nextInt();     // Age of primary applicant
+        int addonAge   = sc.nextInt();     // Age of add-on applicant
+        int empType    = sc.nextInt();     // Employment type code (1-4)
+        double income  = sc.nextDouble();  // Yearly income
+
+        boolean eligible = true;
+
+        // Primary applicant age check
+        if (primaryAge < 21 || primaryAge > 60) {
+            eligible = false;
+        }
+
+        // Add-on card applicant age check
+        if (addonAge <= 18) {
+            eligible = false;
+        }
+
+        // Employment type check
+        if (empType < 1 || empType > 4) {
+            eligible = false;
+        }
+
+        // Income check (must be up to Rs.3 lakh)
+        if (income > 300000) {
+            eligible = false;
+        }
+
+        if (eligible) {
+            System.out.println("Yes. You are eligible for SBI credit cards");
+        } else {
+            System.out.println("No. You are not eligible for SBI credit cards");
+        }
+
+        sc.close();
+    }
+}
