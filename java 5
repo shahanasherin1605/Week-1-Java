@@ -1,1 +1,19 @@
+import java.util.*;
 
+public class MileageRemuneration {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read beginning and ending odometer readings
+        double start = sc.nextDouble();
+        double end   = sc.nextDouble();
+        sc.close();
+
+        // Calculate distance and remuneration
+        double distance = end - start;
+        double remuneration = distance * 25.0;
+
+        // Display distance and remuneration with two decimal places
+        System.out.printf("%.2f %.2f%n", distance, remuneration);
+    }
+}
