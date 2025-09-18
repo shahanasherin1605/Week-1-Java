@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class HarshadNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();   // use long to support large numbers
+
+        long temp = n;
+        long digitSum = 0;
+
+        if (n < 0) {
+            n = -n; // handle negative input by taking absolute value
+        }
+
+        // Calculate the sum of digits
+        long t = n;
+        while (t > 0) {
+            digitSum += t % 10;
+            t /= 10;
+        }
+
+        // If the original number (temp) is divisible by digitSum, it's Harshad
+        if (digitSum != 0 && temp % digitSum == 0) {
+            System.out.println("Harshad Number");
+        } else {
+            System.out.println("Not Harshad Number");
+        }
+
+        sc.close();
+    }
+}
