@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class PerfectSquare {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();   // long to handle larger inputs
+
+        if (n < 0) {
+            System.out.println("Not Perfect Square");
+        } else {
+            long root = (long) Math.sqrt(n); // integer part of the square root
+            if (root * root == n) {
+                System.out.println("Perfect Square");
+            } else {
+                System.out.println("Not Perfect Square");
+            }
+        }
+
+        sc.close();
+    }
+}
