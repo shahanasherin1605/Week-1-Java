@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class DigitsRightToLeft {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        if (n == 0) {
+            System.out.println(0);
+        } else {
+            // Handle negative numbers by converting to positive
+            if (n < 0) {
+                n = Math.abs(n);
+            }
+
+            while (n > 0) {
+                int digit = n % 10;          // get the last digit
+                System.out.print(digit);
+                n /= 10;                     // remove the last digit
+                if (n > 0) {
+                    System.out.print(" ");
+                }
+            }
+        }
+
+        sc.close();
+    }
+}
