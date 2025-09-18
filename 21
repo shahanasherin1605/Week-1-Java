@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();   // use long to handle large numbers
+
+        if (n < 0) {
+            n = -n; // work with positive value for digit sum
+        }
+
+        long sum = 0;
+        while (n > 0) {
+            sum += n % 10;  // add last digit
+            n /= 10;        // remove last digit
+        }
+
+        System.out.println(sum);
+        sc.close();
+    }
+}
